@@ -6,13 +6,15 @@ public class Films {
     private String filmTitle;
     private String filmCategory;
     private String filmDescription;
+    private int requiredAge;
 
     // Constructor
-    public Films(int filmId, String filmTitle, String filmCategory, String filmDescription) {
+    public Films(int filmId, String filmTitle, String filmCategory, String filmDescription, int requiredAge) {
         this.filmId = filmId;
         this.filmTitle = filmTitle;
         this.filmCategory = filmCategory;
         this.filmDescription = filmDescription;
+        this.requiredAge = requiredAge;
     }
 
     // Getters and Setters
@@ -46,5 +48,13 @@ public class Films {
 
     public void setFilmDescription(String filmDescription) {
         this.filmDescription = filmDescription;
+    }
+    
+    public int getRequiredAge() {
+        return requiredAge;
+    }
+
+    public void requiredAge(int requiredAge) {
+        this.requiredAge = requiredAge;
     }
 }
