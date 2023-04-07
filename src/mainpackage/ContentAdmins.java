@@ -1,6 +1,6 @@
 package mainpackage;
 
-public class ContentAdmins {
+public class ContentAdmins extends Users {
     // Attributes
     private String adminId;
     private String cinemaId;
