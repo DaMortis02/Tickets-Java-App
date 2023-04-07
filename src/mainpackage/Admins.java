@@ -1,6 +1,6 @@
 package mainpackage;
 
-public class Admins {
+public class Admins extends Users{
     // Attributes
     private String adminId;
 
