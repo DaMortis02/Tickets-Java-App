@@ -10,6 +10,7 @@ public class Customers extends Users {
         super(name, username, password, email);
         this.reservationId = reservationId;
         this.age = age;
+    }
 
     // Getters and Setters
     public String getReservationId() {
