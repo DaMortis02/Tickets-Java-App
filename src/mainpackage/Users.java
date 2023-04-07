@@ -44,11 +44,20 @@ public class Users {
 	}
 	
 	// Methods
-	public void login(String username, String password) {
-		
+	public boolean login(String username, String password) {
+		// Check if user exists
+		if (userExists(username, password)){
+			return true;
+		}else{
+			return false;
+		}
 	}
 	public void logout() {
 
 	
+	}
+	
+	public boolean userExists(String username, String password){
+		// Search credentials in a database or file
 	}
 }
