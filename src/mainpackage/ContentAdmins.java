@@ -16,7 +16,7 @@ public class ContentAdmins extends Users {
         return adminId;
     }
 
-    public void setAdminId(String AdminId) {
+    public void setAdminId(String adminId) {
         this.adminId = adminId;
     }
     
