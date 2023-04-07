@@ -30,5 +30,8 @@ public class Customers extends Users {
     public void viewReservation() {
     
     }
+        
+    public void updatePersonalInfo(){
+    }
 
 }
