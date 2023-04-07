@@ -1,9 +1,11 @@
 package mainpackage;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Users {
-    String name,username,password, email;
+    String name,username,password ="", email;
     public Users(String name,String username,String password, String email) {
 
         this.name=name;
@@ -86,23 +88,26 @@ public class Users {
         }
 
         //Check if password has at least 1 Upper, 1 Lower case character, 1 Digit and 1 Special character.
-        String specialChars = "!@#$%&*()_+=-|<>?{}[]~ ";
+        boolean hasUpperChar = false;
+        boolean hasLowerChar = false;
+        boolean hasDigit = false;
+        boolean hasSpecialChar = false;
+        
+        //Check for Special char
+        String pattern = "[^a-zA-Z0-9]";
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(password);
 
-         boolean hasUpperChar = false;
-         boolean hasLowerChar = false;
-         boolean hasDigit = false;
-         boolean hasSpecialChar = false;
-
-         if (password.contains(specialChars)){
-             hasSpecialChar = true;
-         }
-
-         for(char c: password.toCharArray()){
-             if (Character.isUpperCase(c)){
+        if (m.find()){
+            hasSpecialChar = true;
+        }
+        
+         for(char c: password.toCharArray()) {
+             if (Character.isUpperCase(c)) {
                  hasUpperChar = true;
-             }else if (Character.isLowerCase(c)){
+             } else if (Character.isLowerCase(c)) {
                  hasLowerChar = true;
-             }else if (Character.isDigit(c)) {
+             } else if (Character.isDigit(c)) {
                  hasDigit = true;
              }
          }
